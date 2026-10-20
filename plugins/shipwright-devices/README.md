@@ -4,6 +4,8 @@ Bundles the open-source [mobile-mcp](https://github.com/mobile-next/mobile-mcp) 
 
 In Shipwright this is how the `frontend-designer` captures every UI state on real simulators and how the `manual-tester` verifies native flows; their tool lists reference `mcp__plugin_shipwright-devices_mobile-mcp`.
 
+`package.json` + `package-lock.json` next to `.mcp.json` pin `@mobilenext/mobile-mcp` to 1.0.11 with registry URLs and integrity hashes; nothing else is installed.
+
 ## Install
 ```bash
 claude plugin marketplace add vebg/shipwright

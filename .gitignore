@@ -13,3 +13,4 @@ assets/**
 !assets/brand/horizontal/
 !assets/brand/horizontal/shipwright-horizontal-mono-14202a.svg
 !assets/brand/horizontal/shipwright-horizontal-white.svg
+node_modules/
