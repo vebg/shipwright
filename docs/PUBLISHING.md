@@ -10,3 +10,14 @@ Submit `plugins/shipwright-delivery` and `plugins/shipwright-devices` separately
 2. `claude --plugin-dir ./plugins/shipwright-delivery` in an empty folder: the first message opens the intake; `/agents` lists the five agents.
 3. `claude plugin eval .` (costs model calls) or at least `--case status-report --runs 1 --ablation none`.
 4. Scaffold with `--memory hindsight --context-mode yes` into a scratch folder and run its `scripts/validate_backlog.py`.
+
+## Plugin evals (`plugins/shipwright-delivery/evals/`)
+Cases for the Claude Code plugin eval command (Claude Code ≥ 2.1.269). Each case runs three times with the plugin and three without; every run and every `llm` grader is a real model call on your account.
+
+| Case | Checks |
+|---|---|
+| `start-interview` | In an empty folder the main session opens the discovery interview (AskUserQuestion) and creates no workspace files before answers. |
+| `status-report` | In a fixture workspace the session reports the backlog state (done/ready/planned, the open question) without starting agents. |
+| `no-tests-policy` | With `automated_tests: forbidden` the session declines to write/run tests, names the policy and the manual-verification alternative. |
+
+Run from the plugin root: `claude plugin eval .` (one case: `claude plugin eval . --case status-report --runs 1 --ablation none`). Results land in `evals/results/` (ignored).

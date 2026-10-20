@@ -10,7 +10,7 @@ A planner-led, evidence-driven delivery workflow for Claude Code, extracted from
 - **Discovery first.** On the first message in a folder that is not yet a workspace, the main session opens the intake; `/shipwright-delivery:start` interviews you in short rounds — the product and its users, surfaces, inspiration links/videos/apps, technologies already decided, constraints, brand, working agreement — writes `requirements/inbox/DISCOVERY-<date>.md` for the planner, and only then scaffolds.
 - **Skills (slash commands):** `/shipwright-delivery:start`, `:resume`, `:plan`, `:design`, `:develop`, `:verify`, `:status`, `:balance` (cost per task/group with totals, statistics, forecast and budget), `:doctor` (machine and workspace checks), `:owner` (the owner's release checklist), `:questions` (open questions with defaults), `:release` (tags, notes, store brief), and `:workflow` (the protocol reference).
 - **Evidence helpers:** `scripts/contact_sheet.py` (labelled contact sheet per task, ImageMagick or ffmpeg) and `scripts/record.sh` (short MP4 from an iOS simulator, Android emulator or the screen).
-- **Evals:** `evals/` holds `claude plugin eval` cases (intake opens the interview, status report, tests policy); see `evals/README.md`.
+- **Scenario cases:** `evals/` holds three scenario cases (intake opens the interview, status report, tests policy) for Claude Code's plugin evaluation command; how to run them is in the repository's docs/PUBLISHING.md.
 
 ## Install
 ```bash
