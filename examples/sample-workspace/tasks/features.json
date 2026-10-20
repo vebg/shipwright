@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "groups": [
+    {
+      "id": "foundation",
+      "title": "Foundation",
+      "tasks": [
+        "TASK-0001",
+        "TASK-0002"
+      ]
+    },
+    {
+      "id": "orders",
+      "title": "Orders and pickup",
+      "tasks": [
+        "TASK-0003",
+        "TASK-0004",
+        "TASK-0005"
+      ]
+    }
+  ]
+}

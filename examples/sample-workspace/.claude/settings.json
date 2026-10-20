@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git branch:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(git show:*)",
+      "Bash(cat:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(sed -n:*)",
+      "Bash(wc:*)",
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(rg:*)",
+      "Bash(python3 scripts/validate_backlog.py:*)",
+      "Bash(python3 scripts/token_usage.py:*)"
+    ],
+    "deny": [
+      "Bash(git push --force:*)",
+      "Bash(git reset --hard:*)",
+      "Read(./**/.env)",
+      "Read(./**/*.pem)",
+      "Bash(dotnet test:*)",
+      "Bash(flutter test:*)",
+      "Bash(dart test:*)",
+      "Bash(melos run test:*)",
+      "Bash(dotnet new xunit:*)",
+      "Bash(dotnet new nunit:*)",
+      "Bash(dotnet new mstest:*)",
+      "Bash(dotnet new bunit:*)",
+      "Bash(npm test:*)",
+      "Bash(npx jest:*)",
+      "Bash(npx vitest:*)",
+      "Bash(npx playwright test:*)",
+      "Bash(pytest:*)"
+    ],
+    "defaultMode": "acceptEdits"
+  }
+}

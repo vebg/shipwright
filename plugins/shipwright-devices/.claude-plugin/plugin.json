@@ -1,0 +1,21 @@
+{
+  "name": "shipwright-devices",
+  "displayName": "Shipwright Devices (mobile-mcp)",
+  "version": "0.1.0",
+  "description": "Pinned mobile-mcp MCP server so Claude Code agents can list, launch, tap, type and read the screen of local iOS simulators and Android emulators or USB devices. Used by Shipwright's frontend-designer and manual-tester; remote cloud devices are never allocated without the user's explicit approval.",
+  "author": {
+    "name": "vebg"
+  },
+  "homepage": "https://github.com/vebg/shipwright",
+  "repository": "https://github.com/vebg/shipwright",
+  "license": "Apache-2.0",
+  "keywords": [
+    "mobile",
+    "ios",
+    "android",
+    "simulator",
+    "emulator",
+    "mcp",
+    "testing"
+  ]
+}

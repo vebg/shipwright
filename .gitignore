@@ -1,0 +1,15 @@
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+.claude/settings.local.json
+.mcpb-cache/
+# private research notes and eval run output
+docs/RESEARCH.md
+plugins/*/evals/results/
+# brand: only the two README lockups are tracked; the rest of the kit stays local
+assets/**
+!assets/brand/
+!assets/brand/horizontal/
+!assets/brand/horizontal/shipwright-horizontal-mono-14202a.svg
+!assets/brand/horizontal/shipwright-horizontal-white.svg

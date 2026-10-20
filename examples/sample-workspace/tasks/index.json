@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "tasks": [
+    {
+      "id": "TASK-0001",
+      "title": "Workspace, toolchains and repository setup (platform + apps)",
+      "file": "tasks/TASK-0001.md",
+      "owner": "fullstack-developer",
+      "status": "done",
+      "priority": 0,
+      "depends_on": [],
+      "verification": "passed",
+      "evidence": [
+        "docs/evidence/TASK-0001.md"
+      ]
+    },
+    {
+      "id": "TASK-0002",
+      "title": "Contracts: order and pickup-slot API v1 + generated Dart client",
+      "file": "tasks/TASK-0002.md",
+      "owner": "fullstack-developer",
+      "status": "ready",
+      "priority": 10,
+      "depends_on": [
+        "TASK-0001"
+      ]
+    },
+    {
+      "id": "TASK-0003",
+      "title": "API: create order with pickup slot (conflict-safe), list orders",
+      "file": "tasks/TASK-0003.md",
+      "owner": "fullstack-developer",
+      "status": "planned",
+      "priority": 11,
+      "depends_on": [
+        "TASK-0002"
+      ]
+    },
+    {
+      "id": "TASK-0004",
+      "title": "Customer app: order flow UI (design part)",
+      "file": "tasks/TASK-0004.md",
+      "owner": "fullstack-developer",
+      "status": "planned",
+      "priority": 12,
+      "depends_on": [
+        "TASK-0001"
+      ]
+    },
+    {
+      "id": "TASK-0005",
+      "title": "Customer app: order flow integration",
+      "file": "tasks/TASK-0005.md",
+      "owner": "fullstack-developer",
+      "status": "planned",
+      "priority": 13,
+      "depends_on": [
+        "TASK-0003",
+        "TASK-0004"
+      ]
+    }
+  ]
+}

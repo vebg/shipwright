@@ -1,0 +1,4 @@
+name: no-tests-policy
+tags: [policy]
+context:
+  scaffold_script: fixture.sh

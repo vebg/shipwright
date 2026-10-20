@@ -1,0 +1,2 @@
+# Diagrams
+Compact Mermaid sources, one file per diagram: architecture/components, entity-relationship model, key workflow and sequence diagrams with failure and concurrency paths where relevant. Proposed elements are labelled. Each diagram records whether a renderer validated it ("rendered with <tool> on <date>" or "source reviewed; rendering not checked"). Update only the diagrams a requirement change affects.

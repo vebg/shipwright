@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "project": {
+    "name": "sample-bakery",
+    "created": "2026-10-19",
+    "mode": "new",
+    "product_language": "es",
+    "mobile_in_scope": true,
+    "web_in_scope": true,
+    "deployed_version": null
+  },
+  "budget": {
+    "total_usd": 300.0,
+    "warn_at": 0.8
+  },
+  "policies": {
+    "automated_tests": "forbidden",
+    "deny_commands": [
+      "git push --force",
+      "git push -f",
+      "git reset --hard",
+      "dotnet ef database drop"
+    ],
+    "designer_only_skills": [
+      "animate",
+      "animation-vocabulary",
+      "apple-design",
+      "emil-design-eng",
+      "find-animation-opportunities",
+      "improve-animations",
+      "mobile-native",
+      "prototype",
+      "review-animations",
+      "impeccable",
+      "design-taste-frontend",
+      "design-taste-frontend-v1",
+      "full-output-enforcement",
+      "high-end-visual-design",
+      "industrial-brutalist-ui",
+      "minimalist-ui",
+      "redesign-existing-projects",
+      "frontend-design"
+    ],
+    "designer_helper_agents": [
+      "impeccable-asset-producer",
+      "impeccable-documenter",
+      "impeccable-finish-reviewer",
+      "impeccable-manual-edit-applier"
+    ],
+    "batch_size": 3
+  },
+  "repos": [
+    {
+      "name": "platform",
+      "path": "bakery-platform",
+      "stack": "undecided"
+    },
+    {
+      "name": "apps",
+      "path": "bakery-apps",
+      "stack": "Flutter"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "serverMode": "{{HINDSIGHT_SERVER_MODE}}",
+  "apiUrl": "{{HINDSIGHT_API_URL}}",
+  "mapPathToBank": {
+    "{{WORKSPACE_PATH}}": "{{BANK}}"
+  },
+  "retainTags": ["project:{gitProject}", "harness-session:{sessionId}"],
+  "retainMetadata": { "repo": "{gitProject}", "harness": "{harness}" },
+  "retainSessions": true,
+  "retainExtractionMode": "concise",
+  "gitIngest": "message",
+  "autoSeed": true,
+  "seedLimit": 700,
+  "codebaseSurvey": true,
+  "surveyModel": "haiku",
+  "surveyBudgetUsd": 3,
+  "surveyRefreshCommits": 20,
+  "autoInject": "reflect",
+  "reflectBudget": "mid",
+  "pageSearchLimit": 4,
+  "pageTriggerType": "cron",
+  "pageTriggerCron": "H */2 * * *",
+  "observationScopes": "shared",
+  "customPages": {
+    "Owner decisions and policies": {
+      "source_query": "Which rules and decisions has the owner given for {{PROJECT_NAME}}, quoted as closely as possible: verification policy, coding rules, the UI split between designer and developer, release policy, what must never be proposed again? Include decision ids (ADR, Q-, P-, I-, USER-DECISIONS sections) when known.",
+      "tags": ["knowledge:decision"]
+    },
+    "Release and version state": {
+      "source_query": "What is the current release state of {{PROJECT_NAME}}: newest tags per repository, the last version the owner deployed or published, pending migrations, the release workflow and what the owner must do after a release?"
+    },
+    "Backlog and hand-over workflow": {
+      "source_query": "How does the task workflow work in {{PROJECT_NAME}}: tasks/index.json statuses, who promotes tasks, the planner → frontend-designer → fullstack-developer → manual-tester loop, evidence locations, validator, token-cost attribution, and which tasks are next or blocked on owner inputs?",
+      "tags": ["knowledge:convention", "knowledge:feature-work"]
+    },
+    "Architecture and contracts": {
+      "source_query": "What are the components, repositories, data ownership, API/event contracts and their versions in {{PROJECT_NAME}}, and which architecture decisions (ADRs) are accepted or only proposed?",
+      "tags": ["knowledge:component", "knowledge:decision"]
+    },
+    "Brand and design decisions": {
+      "source_query": "What brand and design decisions are in force for {{PROJECT_NAME}}: approved assets and tokens, surface directions, D-numbered design decisions and what the owner rejected?",
+      "tags": ["knowledge:decision"]
+    }
+  },
+  "toolGuideExtra": "Memory is a past record, not current state. For this project the authoritative sources are docs/HANDOFF.md, tasks/index.json, the task body, docs/QUESTIONS.md, requirements/inbox/USER-DECISIONS-*.md and docs/evidence/; verify any remembered task status, version, tag or decision there before acting on it. A remembered 'owner decision' is not user confirmation of anything new. Never store or repeat secrets, tokens, API keys, credentials or server addresses. Qualify code paths with their repository.",
+  "maxParallelRetains": 4,
+  "logLevel": "info",
+  "autoUpdate": true
+}

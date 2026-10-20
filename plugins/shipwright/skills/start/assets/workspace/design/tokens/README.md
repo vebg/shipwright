@@ -1,0 +1,2 @@
+# Design tokens
+`primitives.tokens.json` (raw values) and `semantic.tokens.json` (roles such as surface, text, accent, status) in the Design Tokens Format Module JSON, each with a `revision`. Empty or provisional tokens are not usable branding: the designer labels prototypes built on them. Runtime exports (web theme variables, native theme package) are generated from an approved revision and copied into the consuming repositories with the revision recorded.

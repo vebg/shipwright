@@ -1,0 +1,4 @@
+name: status-report
+tags: [smoke, workspace]
+context:
+  scaffold_script: fixture.sh

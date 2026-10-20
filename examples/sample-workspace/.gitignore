@@ -1,0 +1,12 @@
+# Shipwright workspace
+/bakery-platform/
+/bakery-apps/
+.DS_Store
+.claude/settings.local.json
+.venv/
+# Hindsight memory (project-level wiring): the config is tracked, local logs are not.
+/.hindsight/logs/
+# context-mode plugin (project scope): per-project sessions and indexed content stay local.
+/.context-mode/
+docs/evidence/screenshots/**/*.mp4
+docs/evidence/screenshots/**/*.webm

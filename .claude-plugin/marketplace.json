@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "shipwright",
+  "description": "Shipwright: a production-grade delivery workflow for Claude Code — planner, frontend-designer, fullstack-developer and manual-tester agents over a traceable backlog with evidence, plus mobile device tools. Works with Hindsight project memory and the context-mode plugin when they are installed.",
+  "owner": {
+    "name": "vebg"
+  },
+  "plugins": [
+    {
+      "name": "shipwright",
+      "source": "./plugins/shipwright",
+      "description": "Planner-led delivery workflow: requirements to traceable tasks, static-first design hand-over, backend/integration development, manual verification with evidence, token-cost tracking, guard hooks, and optional project-level wiring for Hindsight memory and context-mode.",
+      "category": "productivity"
+    },
+    {
+      "name": "shipwright-devices",
+      "source": "./plugins/shipwright-devices",
+      "description": "Pinned mobile-mcp MCP server so the designer and the manual tester can drive local iOS simulators and Android emulators (list, tap, type, read the screen).",
+      "category": "testing"
+    }
+  ]
+}
