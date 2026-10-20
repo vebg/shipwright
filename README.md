@@ -18,7 +18,7 @@ Two plugins extracted from a real product delivery — requirements to store-rea
 
 | Plugin | What it gives you | Install id |
 |---|---|---|
-| [`shipwright`](plugins/shipwright-delivery/README.md) | The workflow: `planner` as the main session, `frontend-designer`, `fullstack-developer`, `manual-tester` and an optional `store-compliance-reviewer`; `/shipwright-delivery:start` intake; guard hooks; token-cost tracking; workspace scaffold with templates and the protocol docs; optional project-level wiring for Hindsight memory and context-mode | `shipwright-delivery@shipwright` |
+| [`shipwright-delivery`](plugins/shipwright-delivery/README.md) | The workflow: `planner` as the main session, `frontend-designer`, `fullstack-developer`, `manual-tester` and an optional `store-compliance-reviewer`; `/shipwright-delivery:start` intake; guard hooks; token-cost tracking; workspace scaffold with templates and the protocol docs; optional project-level wiring for Hindsight memory and context-mode | `shipwright-delivery@shipwright` |
 | [`shipwright-devices`](plugins/shipwright-devices/README.md) | Pinned `mobile-mcp` server for driving local iOS simulators and Android emulators | `shipwright-devices@shipwright` |
 
 ## Who it is for
