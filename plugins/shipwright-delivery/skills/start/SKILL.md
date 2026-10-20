@@ -3,7 +3,7 @@ name: start
 description: Guided entry point of the Shipwright. Runs the discovery interview (product, users, surfaces, inspiration links/videos/apps, technologies already decided, constraints, brand, working agreement), collects the few decisions the kit needs, scaffolds the workspace (optionally with Hindsight memory and context-mode wiring) and explains the next step. Also adopts an existing repository, resumes a workspace, or sets up memory, context-mode or device tools. Use when a directory has no Shipwright workspace yet or the user asks how to begin.
 disable-model-invocation: true
 argument-hint: "[new|adopt|resume|memory|context|devices]"
-allowed-tools: AskUserQuestion, Read, Glob, Grep, Write, Edit, WebFetch, Bash(python3:*)
+allowed-tools: AskUserQuestion, Read, Glob, Grep, Write, Edit, WebFetch, Bash(python3 ${CLAUDE_PLUGIN_ROOT}/skills/start/scripts/scaffold.py *)
 ---
 # /shipwright-delivery:start
 
@@ -43,14 +43,14 @@ Routine choices (folder names, templates) are not asked; the kit's defaults appl
 Run the scaffold with the answers (quote values; repeat `--repo` per child):
 
 ```bash
-python3 "${CLAUDE_PLUGIN_ROOT}/skills/start/scripts/scaffold.py" --target "<directory>" --name "<project>" --mode <new|adopt> --tests <forbidden|allowed> --language <code> --stack "<summary>" [--mobile yes|no] [--web yes|no] [--repo "<name>=<folder>:<stack>" ...] [--memory hindsight [--hindsight-url URL] [--hindsight-mode self-hosted|cloud]] [--context-mode yes]
+python3 ${CLAUDE_PLUGIN_ROOT}/skills/start/scripts/scaffold.py --target "<directory>" --name "<project>" --mode <new|adopt> --tests <forbidden|allowed> --language <code> --stack "<summary>" [--mobile yes|no] [--web yes|no] [--repo "<name>=<folder>:<stack>" ...] [--memory hindsight [--hindsight-url URL] [--hindsight-mode self-hosted|cloud]] [--context-mode yes]
 ```
 
 The script never overwrites existing files (it lists what it skipped), creates the kit folders, renders `CLAUDE.md`, `shipwright.json`, the docs, templates, design hub, `.claude/settings.json`, `tasks/index.json`, the first ADRs and copies the validator, the token report and the protocol references. With `--memory hindsight` it also writes the tracked `.hindsight/coding-agent.json`, merges the Hindsight hooks, `env` and MCP servers into `.claude/settings.json` and `.mcp.json` (adds missing entries only), ignores `/.hindsight/logs/`, and copies the runtime's companion skill from `~/.hindsight/coding-agents/skill/` when present. With `--context-mode yes` it writes `CONTEXT_MODE_DIR` and ignores `/.context-mode/`. `--budget-usd N` stores the budget for `/shipwright-delivery:balance`; `--chat-updates yes` copies docs/CHAT-UPDATES.md. Then write the discovery file (§2), run `python3 scripts/validate_backlog.py` in the target and show the result.
 
 ## 5. Memory, context-mode and device tools
 Explain, confirm, and only then act. Nothing here installs software without the user's explicit yes; the kit bundles none of these tools.
-- **Hindsight memory** (long-term project memory, one bank per workspace). Prerequisites the user installs: a Hindsight server (self-hosted in Docker, API on `127.0.0.1:8888` by default, or the cloud service) and the runtime `npx @vectorize-io/hindsight-coding-agents install claude-code` (stages `~/.hindsight/coding-agents`). Then, in the workspace: `python3 "${CLAUDE_PLUGIN_ROOT}/skills/start/scripts/scaffold.py" --target . --name "<project>" --mode adopt --memory hindsight [--hindsight-url URL]` — it adds only the memory files and entries (everything else is skipped as existing). Restart Claude Code; the 🧠 banner and the `mcp__hindsight` tools confirm the wiring. Edit `.hindsight/coding-agent.json` `customPages` to the project's own questions.
+- **Hindsight memory** (long-term project memory, one bank per workspace). Prerequisites the user installs: a Hindsight server (self-hosted in Docker, API on `127.0.0.1:8888` by default, or the cloud service) and the runtime `npx @vectorize-io/hindsight-coding-agents install claude-code` (stages `~/.hindsight/coding-agents`). Then, in the workspace: `python3 ${CLAUDE_PLUGIN_ROOT}/skills/start/scripts/scaffold.py --target . --name "<project>" --mode adopt --memory hindsight [--hindsight-url URL]` — it adds only the memory files and entries (everything else is skipped as existing). Restart Claude Code; the 🧠 banner and the `mcp__hindsight` tools confirm the wiring. Edit `.hindsight/coding-agent.json` `customPages` to the project's own questions.
 - **context-mode** (sandboxed command output and document indexing): `claude plugin marketplace add mksglu/context-mode` then `claude plugin install context-mode@context-mode` (user scope) or enable it in the project's `enabledPlugins`; then `scaffold.py --target . --name "<project>" --mode adopt --context-mode yes` writes `CONTEXT_MODE_DIR` and the ignore line. `/context-mode:ctx-doctor` checks the install.
 - **Device tools**: `claude plugin install shipwright-devices@shipwright`; the designer and the tester then drive local simulators/emulators; remote devices are never allocated without the user's approval.
 
