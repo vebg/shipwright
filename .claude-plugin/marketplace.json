@@ -7,8 +7,8 @@
   },
   "plugins": [
     {
-      "name": "shipwright",
-      "source": "./plugins/shipwright",
+      "name": "shipwright-delivery",
+      "source": "./plugins/shipwright-delivery",
       "description": "Planner-led delivery workflow: requirements to traceable tasks, static-first design hand-over, backend/integration development, manual verification with evidence, token-cost tracking, guard hooks, and optional project-level wiring for Hindsight memory and context-mode.",
       "category": "productivity"
     },

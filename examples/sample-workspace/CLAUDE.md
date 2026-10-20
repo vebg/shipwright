@@ -48,7 +48,7 @@ For UI work read docs/DESIGN-WORKFLOW.md, design/BRAND.md and the relevant desig
 End-user texts are in `es`; all project documentation, task files, evidence and communication with the owner are in English unless the owner says otherwise.
 
 ## Persistent memory (Hindsight, optional)
-Not wired. To add Hindsight memory later run `/shipwright:start memory` (self-hosted server + the `@vectorize-io/hindsight-coding-agents` runtime are installed by the owner; the scaffold writes only the project-level wiring). Until then the agents skip their memory sections.
+Not wired. To add Hindsight memory later run `/shipwright-delivery:start memory` (self-hosted server + the `@vectorize-io/hindsight-coding-agents` runtime are installed by the owner; the scaffold writes only the project-level wiring). Until then the agents skip their memory sections.
 
 ## Context budget (context-mode, optional)
-Not enabled. To add it later: `claude plugin marketplace add mksglu/context-mode`, `claude plugin install context-mode@context-mode`, then `/shipwright:start context`. Until then the agents skip their context-budget sections.
+Not enabled. To add it later: `claude plugin marketplace add mksglu/context-mode`, `claude plugin install context-mode@context-mode`, then `/shipwright-delivery:start context`. Until then the agents skip their context-budget sections.

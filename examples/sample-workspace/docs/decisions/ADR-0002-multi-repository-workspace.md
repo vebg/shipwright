@@ -1,5 +1,5 @@
 # ADR-0002 — Coordination workspace with separate application Git roots
-Status: Accepted — owner answer at workspace creation (2026-10-19, `/shipwright:start`).
+Status: Accepted — owner answer at workspace creation (2026-10-19, `/shipwright-delivery:start`).
 
 ## Context
 The product has several deployables with different toolchains and release cycles. One backlog, one set of requirements, one evidence folder and one design hub must coordinate them without forcing one repository, one CI or one atomic commit.

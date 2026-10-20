@@ -2,7 +2,7 @@
 """Shared helpers for the Shipwright hook scripts (standard library only).
 
 A Shipwright workspace is recognised by `shipwright.json` (or the pre-rename `delivery-kit.json`) at its root (written by
-/shipwright:start) or, for workspaces created before that file existed, by the pair
+/shipwright-delivery:start) or, for workspaces created before that file existed, by the pair
 `tasks/index.json` + `docs/HANDOFF.md`.
 """
 import json

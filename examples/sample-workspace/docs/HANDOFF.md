@@ -3,7 +3,7 @@ Compact current state. Agents append at most a short dated block under "Latest r
 
 ## State (2026-10-19, scaffold)
 - Workspace created with the Shipwright plugin for **sample-bakery**. No requirements ingested yet; the backlog is empty.
-- Next: put requirements in requirements/inbox/, fill requirements/INTAKE.md, then run `/shipwright:plan`.
+- Next: put requirements in requirements/inbox/, fill requirements/INTAKE.md, then run `/shipwright-delivery:plan`.
 - Open owner items: brand resources (design/README.md), stack confirmation (docs/STACK.md), repository access.
 
 ## Latest runs

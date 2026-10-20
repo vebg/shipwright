@@ -1,5 +1,5 @@
 # Requirements intake
-Fill this before the first `/shipwright:plan`. The planner ingests requirements/inbox/ and this file, assigns stable REQ IDs in SPEC.md and records every source in CATALOG.md.
+Fill this before the first `/shipwright-delivery:plan`. The planner ingests requirements/inbox/ and this file, assigns stable REQ IDs in SPEC.md and records every source in CATALOG.md.
 
 - Product in one paragraph:
 - Users / actors:

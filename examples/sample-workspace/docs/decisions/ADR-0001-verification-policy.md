@@ -1,5 +1,5 @@
 # ADR-0001 — No automated tests; manual verification by the manual-tester agent and the owner
-Status: Accepted — owner answer at workspace creation (2026-10-19, `/shipwright:start`; `policies.automated_tests = "forbidden"` in shipwright.json). Only the owner can revisit it.
+Status: Accepted — owner answer at workspace creation (2026-10-19, `/shipwright-delivery:start`; `policies.automated_tests = "forbidden"` in shipwright.json). Only the owner can revisit it.
 
 ## Context
 Automated test suites cost agent time and context on every task and, in the delivery workflow this kit comes from, did not provide the evidence that mattered: booking races, authorization, privacy and realtime recovery still needed real requests, persisted-state queries and device runs. The owner chose manual verification with recorded evidence instead.
