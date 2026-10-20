@@ -2,8 +2,8 @@
   "mcpServers": {
     "mobile-mcp": {
       "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "@mobilenext/mobile-mcp@1.0.11"]
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/node_modules/@mobilenext/mobile-mcp/lib/index.js", "--stdio"]
     }
   }
 }

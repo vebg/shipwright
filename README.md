@@ -19,7 +19,7 @@ Two plugins extracted from a real product delivery — requirements to store-rea
 | Plugin | What it gives you | Install id |
 |---|---|---|
 | [`shipwright-delivery`](plugins/shipwright-delivery/README.md) | The workflow: `planner` as the main session, `frontend-designer`, `fullstack-developer`, `manual-tester` and an optional `store-compliance-reviewer`; `/shipwright-delivery:start` intake; guard hooks; token-cost tracking; workspace scaffold with templates and the protocol docs; optional project-level wiring for Hindsight memory and context-mode | `shipwright-delivery@shipwright` |
-| [`shipwright-devices`](plugins/shipwright-devices/README.md) | Pinned `mobile-mcp` server for driving local iOS simulators and Android emulators | `shipwright-devices@shipwright` |
+| [`shipwright-devices`](plugins/shipwright-devices/README.md) | Lockfile-pinned `mobile-mcp` server for driving local iOS simulators and Android emulators | `shipwright-devices@shipwright` |
 
 ## Who it is for
 Shipwright is written first for experienced developers. Anyone can run it — the intake interview asks about the product, the stack and the way of working, and the agents do the building — but it pays off most when you already know how to ship software: you choose technologies you are familiar with, you can read the deliverables and evidence the agents hand back, you notice when a plan or a build is wrong, and you can answer the questions the planner raises instead of guessing. If you are new to software, it still works as a guided path: pick a stack the agents know well, keep the scope small, read every evidence file, and expect to learn as you go.

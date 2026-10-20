@@ -1,10 +1,10 @@
 # Shipwright Devices
 
-Bundles the open-source [mobile-mcp](https://github.com/mobile-next/mobile-mcp) server (Apache-2.0, `@mobilenext/mobile-mcp`, pinned to 1.0.11) as a Claude Code plugin so that agents can drive local iOS simulators, Android emulators and USB-connected devices: list devices, launch apps, open URLs, read the on-screen element tree, tap by reference, type, swipe and take screenshots.
+Bundles the open-source [mobile-mcp](https://github.com/mobile-next/mobile-mcp) server (Apache-2.0, `@mobilenext/mobile-mcp`, locked at 1.0.11) as a Claude Code plugin so that agents can drive local iOS simulators, Android emulators and USB-connected devices: list devices, launch apps, open URLs, read the on-screen element tree, tap by reference, type, swipe and take screenshots.
 
 In Shipwright this is how the `frontend-designer` captures every UI state on real simulators and how the `manual-tester` verifies native flows; their tool lists reference `mcp__plugin_shipwright-devices_mobile-mcp`.
 
-`package.json` + `package-lock.json` next to `.mcp.json` pin `@mobilenext/mobile-mcp` to 1.0.11 with registry URLs and integrity hashes; nothing else is installed.
+`package.json` + `package-lock.json` next to `.mcp.json` pin `@mobilenext/mobile-mcp` to 1.0.11 with registry URLs and integrity hashes. Claude Code installs exactly that lockfile into the plugin folder when the plugin is installed (frozen versions, `--ignore-scripts`), and the server runs the installed copy: `node ${CLAUDE_PLUGIN_ROOT}/node_modules/@mobilenext/mobile-mcp/lib/index.js --stdio`. No `npx`, nothing resolved at run time. If `/plugin` reports that the packages are not installed (offline install, timeout), run `npm ci --ignore-scripts` in the plugin's cache folder shown by `claude plugin list --json`.
 
 ## Install
 ```bash
