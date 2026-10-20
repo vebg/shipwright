@@ -11,7 +11,7 @@ In Shipwright this is how the `frontend-designer` captures every UI state on rea
 claude plugin marketplace add vebg/shipwright
 claude plugin install shipwright-devices@shipwright
 ```
-Requirements: Node.js with `npx`; Xcode with simulators for iOS; Android SDK platform tools (`adb`) and an emulator or device for Android. On an iOS simulator the first run installs the tool's on-device agent (`mobilecli agent install --device <id>`), which then stays on that simulator.
+Requirements: Node.js (`node` and `npm` on PATH, for the lockfile install); Xcode with simulators for iOS; Android SDK platform tools (`adb`) and an emulator or device for Android. On an iOS simulator the first run installs the tool's on-device agent (`mobilecli agent install --device <id>`), which then stays on that simulator.
 
 ## Rules the agents follow
 - Start with `mobile_list_available_devices`; devices must be booted to appear; pass the chosen id to every call.
@@ -21,7 +21,7 @@ Requirements: Node.js with `npx`; Xcode with simulators for iOS; Android SDK pla
 - On a personal phone capture only the product's screens, never account choosers, notification shades or other apps; crop status bars.
 
 ## What this plugin runs, sends and stores
-Claude Code starts `npx -y @mobilenext/mobile-mcp@1.0.11` as a local stdio process at session start; `npx` downloads the pinned package from the npm registry on first use. The server talks to your local simulators/emulators/devices through Apple's and Android's command-line tools. Nothing is sent elsewhere unless a tool call explicitly targets a remote device, which the agents may not do without your approval. The plugin stores nothing itself.
+Claude Code installs the locked packages into the plugin folder when the plugin is installed and starts `node …/node_modules/@mobilenext/mobile-mcp/lib/index.js --stdio` as a local stdio process at session start; nothing is downloaded at run time. The server talks to your local simulators/emulators/devices through Apple's and Android's command-line tools. Nothing is sent elsewhere unless a tool call explicitly targets a remote device, which the agents may not do without your approval. The plugin stores nothing itself.
 
 ## Licence
 Apache License 2.0 for this plugin wrapper; mobile-mcp is Apache-2.0 by Mobile Next.
