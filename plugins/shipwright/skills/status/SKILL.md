@@ -2,7 +2,7 @@
 name: status
 description: Report the state of a Shipwright workspace — backlog counts by status and verification, next ready tasks, open questions, blockers, Git status per repository and the token cost so far. Use when the owner asks where things stand.
 disable-model-invocation: true
-allowed-tools: Read, Bash, Glob, Grep
+allowed-tools: Read, Glob, Grep, Bash(python3:*), Bash(git status:*), Bash(git log:*)
 ---
 # /shipwright:status
 

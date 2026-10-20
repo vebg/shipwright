@@ -2,7 +2,7 @@
 name: doctor
 description: Check the machine and the workspace before agents run — Python, Git, Node, Claude Code, the kit files and validator, the code repositories, the Hindsight runtime/server/hooks, context-mode, guard hooks, ignore lines, and the mobile/evidence tools (Xcode, adb, Flutter, .NET, ImageMagick, ffmpeg). Use at the start of a project, after installing companions, or when something "does not work".
 disable-model-invocation: true
-allowed-tools: Read, Bash, Glob, Grep
+allowed-tools: Read, Glob, Grep, Bash(python3:*)
 ---
 # /shipwright:doctor
 

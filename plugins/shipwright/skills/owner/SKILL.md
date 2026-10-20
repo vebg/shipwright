@@ -3,7 +3,7 @@ name: owner
 description: The owner's checklist — everything the owner must do that agents never do: versions to release since the last deployed one, environment/configuration lines, migrations, store steps, "For the owner" sections from evidence, open questions with their defaults, and HANDOFF's "waiting on the owner" items. Use before a release, when the owner asks "what do I need to do?", or at the end of a milestone.
 disable-model-invocation: true
 argument-hint: "[--since vX.Y.Z]"
-allowed-tools: Read, Bash, Glob, Grep, Write, Edit
+allowed-tools: Read, Glob, Grep, Write, Edit, Bash(python3:*)
 ---
 # /shipwright:owner
 

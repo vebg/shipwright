@@ -3,7 +3,7 @@ name: balance
 description: Cost balance of the workspace — every task with its status, group (feature or priority band) and USD cost, a header with the total spent and statistics (by status, average/median per done task, most expensive, forecast for the remaining tasks) and the budget lines from shipwright.json when set. Use when the owner asks what things cost, how much is left, or before approving a batch.
 disable-model-invocation: true
 argument-hint: "[feature|priority] [--status done,ready] [--top 10]"
-allowed-tools: Read, Bash, Glob, Grep
+allowed-tools: Read, Glob, Grep, Bash(python3:*)
 ---
 # /shipwright:balance
 

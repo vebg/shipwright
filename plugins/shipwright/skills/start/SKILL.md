@@ -3,7 +3,7 @@ name: start
 description: Guided entry point of the Shipwright. Runs the discovery interview (product, users, surfaces, inspiration links/videos/apps, technologies already decided, constraints, brand, working agreement), collects the few decisions the kit needs, scaffolds the workspace (optionally with Hindsight memory and context-mode wiring) and explains the next step. Also adopts an existing repository, resumes a workspace, or sets up memory, context-mode or device tools. Use when a directory has no Shipwright workspace yet or the user asks how to begin.
 disable-model-invocation: true
 argument-hint: "[new|adopt|resume|memory|context|devices]"
-allowed-tools: AskUserQuestion, Read, Glob, Grep, Bash, Write, Edit, WebFetch
+allowed-tools: AskUserQuestion, Read, Glob, Grep, Write, Edit, WebFetch, Bash(python3:*)
 ---
 # /shipwright:start
 
